@@ -25,3 +25,9 @@ class Collection(CollectionType):
 
     def getByID(self, id: str):
         return self.getOne({'_id': ObjectId(id)})
+
+    def deleteByID(self, id: str):
+        return self.delete_one({'_id': ObjectId(id)})
+
+    def updateByID(self, id: str, setVal: dict):
+        return self.update_one({'_id': ObjectId(id)}, {'$set': setVal})

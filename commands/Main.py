@@ -31,7 +31,7 @@ class Command(BaseCommand):
                         embed.add_field(name=f'{self.bot.command_prefix}{cmd.name}' if not cmd.usage else f'{self.bot.command_prefix}{cmd.usage}', value=cmd.help or '설명 없음', inline=True)
                     else:
                         for child_cmd in cmd.commands:
-                            embed.add_field(name=f'{self.bot.command_prefix}{cmd.name} {child_cmd.name}' if not cmd.usage else f'{self.bot.command_prefix}{cmd.name} {child_cmd.usage}', value=child_cmd.help or '설명 없음', inline=True)
+                            embed.add_field(name=f'{self.bot.command_prefix}{cmd.name} {child_cmd.name}' if not child_cmd.usage else f'{self.bot.command_prefix}{cmd.name} {child_cmd.usage}', value=child_cmd.help or '설명 없음', inline=True)
 
                 embeds.append(embed)
 
