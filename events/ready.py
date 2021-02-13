@@ -1,5 +1,3 @@
-from discord import Game
-
 from extension import BaseEvent
 
 

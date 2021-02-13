@@ -1,5 +1,5 @@
 from discord import Embed, Color
-from discord.ext.commands import command, group
+from discord.ext.commands import group
 
 from asyncio import TimeoutError
 from EZPaginator import Paginator

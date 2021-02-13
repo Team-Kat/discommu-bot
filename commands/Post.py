@@ -144,7 +144,7 @@ class Command(BaseCommand):
             await ctx.send(embed=Embed(title='님이 만드신 글만 수정 가능합니다', color=Color.red()))
             return
 
-        await ctx.send(embed=Embed(title='글 수정', description=f'글의 내용을 수정하세요? (10분이 지나면 자동으로 취소됩니다)', color=Color.orange()))
+        await ctx.send(embed=Embed(title='글 수정', description='글의 내용을 수정하세요? (10분이 지나면 자동으로 취소됩니다)', color=Color.orange()))
 
         try:
             msg = await self.bot.wait_for('message', check=(lambda m: (m.channel == ctx.channel) and (m.author == ctx.author)), timeout=600)
@@ -157,7 +157,7 @@ class Command(BaseCommand):
             if splitext(msg.attachments[0].filename)[1][1:] in ['png', 'jpg', 'jpeg', 'gif']:
                 content += f'\n![Image]({msg.attachments[0].url})'
 
-        msg = await ctx.send(embed=Embed(title='글 수정', description=f'정말 글을 수정하겠습니까?', color=Color.orange()))
+        msg = await ctx.send(embed=Embed(title='글 수정', description='정말 글을 수정하겠습니까?', color=Color.orange()))
 
         await msg.add_reaction('⭕')
         await msg.add_reaction('❌')
@@ -365,7 +365,7 @@ class Command(BaseCommand):
             await ctx.send(embed=Embed(title='자기가 작성한 댓글만 삭제 가능합니다', color=Color.red()))
             return
 
-        msg = await ctx.send(embed=Embed(title='댓글 삭제', description=f'이 댓글을 삭제할까요?', color=Color.orange()))
+        msg = await ctx.send(embed=Embed(title='댓글 삭제', description='이 댓글을 삭제할까요?', color=Color.orange()))
         await msg.add_reaction('⭕')
         await msg.add_reaction('❌')
 

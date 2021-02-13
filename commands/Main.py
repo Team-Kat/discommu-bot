@@ -1,7 +1,6 @@
 from discord import Embed, Color
 from discord.ext.commands import command
 
-from asyncio import TimeoutError
 from EZPaginator import Paginator
 
 from extension import BaseCommand
