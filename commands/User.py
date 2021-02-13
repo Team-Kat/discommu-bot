@@ -26,7 +26,7 @@ class Command(BaseCommand):
 
         if self.bot.userDB.getOne({'discordID': str(ctx.author.id)}):
             return
-        self.bot.userDB.insert({
+        self.bot.userDB.insert_one({
             'discordID': str(ctx.author.id),
             'point': 0,
             'permissions': [],

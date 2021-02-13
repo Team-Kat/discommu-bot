@@ -19,6 +19,3 @@ class BaseCommand(Cog):
 
     async def cog_before_invoke(self, ctx: Context):
         setattr(ctx, 'userDBval', self.bot.userDB.getOne({'discordID': str(ctx.author.id)}))
-
-    async def cog_after_invoke(self, ctx: Context):
-        self.bot.userCommands[str(ctx.author.id)] = False

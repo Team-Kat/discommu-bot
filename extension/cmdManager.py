@@ -42,7 +42,11 @@ def gather_commands(
         cmd = import_module(name).Command(bot)
         cmd.__cog_name__ = cmd.name
         for command in cmd.get_commands():
-            command.add_check(bot.check_usingcommand)
+            if 'commands' not in dir(command):
+                command.add_check(bot.check_usingcommand)
+            else:
+                for child_cmd in command.commands:
+                    child_cmd.add_check(bot.check_usingcommand)
         bot.add_cog(cmd)
     return cmds
 
