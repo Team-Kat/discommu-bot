@@ -47,7 +47,7 @@ class Discommu(Bot):
 
     async def check_owner(self, ctx):
         user = self.userDB.getOne({'discordID': str(ctx.author.id)})
-        if (not user) or ('admin' in user['permissions']):
+        if (not user) or ('admin' not in user['permissions']):
             await ctx.send(embed=Embed(title='오너가 아닙니다', color=Color.red()))
             return False
         return True
