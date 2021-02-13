@@ -12,3 +12,5 @@ class Event(BaseEvent):
         BotToken: {self.bot.config["token"][:10] + "*" * (len(self.bot.config["token"]) - 10)}
         ==========================================
         ''')
+
+        self.bot.change_presence_loop.start()
