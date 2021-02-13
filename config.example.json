@@ -1,0 +1,9 @@
+{
+    "token": "",
+    "command_prefix": "d!",
+
+    "db": {
+        "password": "password",
+        "url": "kiki.babo.mongodb.net"
+    }
+}

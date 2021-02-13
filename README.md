@@ -1,0 +1,2 @@
+# Discommu
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9a64c873b73a44b1b294c00d476b890a)](https://www.codacy.com/gh/Team-Kat/discommu-bot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Team-Kat/discommu-bot&amp;utm_campaign=Badge_Grade)
